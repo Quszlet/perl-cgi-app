@@ -6,13 +6,12 @@ use warnings;
 use IO::Socket::INET;
 use Scalar::Util 'blessed';
 
-use lib 'server/handler/';
-use Handler;
     
 sub new {
     my ($class, %args) = @_;
     my $self = {
         port => $args{port} || 8080,
+        handler => $args{handler},
     };
     bless $self, $class;
     return $self;
@@ -40,8 +39,7 @@ sub start {
         if ($pid == 0) {
             # Дочерний процесс обрабатывает запрос
             $server->close();
-            my $handler = Handler->new(client => $client);
-            $handler->process_request();
+            $self->{handler}->process_request($client);
             exit(0);
         }
         # Родительский процесс закрывает клиентский сокет и продолжает принимать новые соединения

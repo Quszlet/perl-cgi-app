@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Обращение в техническую поддержку</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: url("images/bg_support.jpg") no-repeat center top;
+      background-size: cover;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+    }
+    header, footer {
+      text-align: center;
+      padding: 10px;
+    }
+    header img {
+      max-width: 150px;
+    }
+    nav {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 16px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #005792;
+      font-weight: bold;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #005792;
+    }
+    form {
+      margin-top: 20px;
+    }
+    .field {
+      margin-bottom: 15px;
+    }
+    .field label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .field input[type="text"],
+    .field input[type="email"],
+    .field textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .field textarea {
+      resize: vertical;
+    }
+    input[type="submit"] {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background: #005792;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    .info-section {
+      margin-top: 40px;
+    }
+    .support-image {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Навигация по странице -->
+  <nav>
+    <a href="#top">На начало</a>
+    <a href="#form">Форма</a>
+    <a href="#info">Информация</a>
+    <a href="#images">Изображения</a>
+    <a href="#bottom">В конец</a>
+    <a href="/mainpage.html" target="_top">Главная страница</a>
+  </nav>
+
+  <!-- Начало страницы -->
+  <div class="container">
+    <a name="top"></a>
+    <header>
+      <img src="/support_logo.png" alt="Логотип технической поддержки">
+      <h1>Обращение в техническую поддержку</h1>
+      <p>Если у вас возникли вопросы или проблемы, заполните форму ниже. Наша служба поддержки ответит вам в кратчайшие сроки.</p>
+    </header>
+
+    <!-- Форма обращения -->
+    <a name="form"></a>
+    <section>
+      <h2>Форма обращения</h2>
+      <form action="/support/support_submit.cgi" method="POST">
+        <div class="field">
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required value="123">
+        </div>
+        <div class="field">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required value="123@gmail.com">
+        </div>
+        <div class="field">
+          <label for="question">Ваш вопрос:</label>
+          <textarea id="question" name="question" rows="8" required >123</textarea>
+        </div>
+        <input type="submit" value="Отправить">
+      </form>
+    </section>
+
+    <!-- Дополнительная информация о службе поддержки -->
+    <a name="info"></a>
+    <section class="info-section">
+      <h2>Информация о технической поддержке</h2>
+      <p>Наша служба технической поддержки работает 24/7, чтобы помочь вам решить любые проблемы, связанные с нашим сервисом. Вы можете отправить свой вопрос через форму, и наш специалист свяжется с вами в ближайшее время.</p>
+      <p>Телефон для справок: +7 (495) 123-45-67</p>
+      <p>Email для обращений: support@airline-example.ru</p>
+    </section>
+
+    <!-- Секция изображений -->
+    <a name="images"></a>
+    <section class="info-section">
+      <h2>Наши изображения</h2>
+      <ul>
+        <li><a href="#img1">Поддержка 1</a></li>
+        <li><a href="#img2">Поддержка 2</a></li>
+      </ul>
+      <div id="img1">
+        <img src="/support1.jpg" alt="Изображение поддержки 1" class="support-image">
+        <p>Наши специалисты всегда готовы помочь.</p>
+      </div>
+      <div id="img2">
+        <img src="/support2.jpg" alt="Изображение поддержки 2" class="support-image">
+        <p>Дружелюбная команда технической поддержки.</p>
+      </div>
+    </section>
+
+    <!-- Конец страницы -->
+    <a name="bottom"></a>
+    <footer>
+      <nav>
+        <a href="#top">Наверх</a>
+        <a href="#form">К форме</a>
+        <a href="#info">К информации</a>
+        <a href="#images">К изображениям</a>
+        <a href="/mainpage.html" target="_top">Главная страница</a>
+      </nav>
+      <p>&copy; 2025 Заказ авиабилетов</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Главная страница - Заказ авиабилетов</title>
+  </head>
+  <!-- Разбиваем окно браузера на два ряда: верхний (заголовок) и нижний (меню + контент) -->
+  <frameset rows="150,*" frameborder="1" border="1" framespacing="0">
+    <!-- Верхний фрейм: заголовок -->
+    <frame src="header" name="header" scrolling="no" noresize>
+    <!-- Нижний фрейм разделён на два столбца -->
+    <frameset cols="200,*" frameborder="1" border="1" framespacing="0">
+      <!-- Левый фрейм: меню навигации -->
+      <frame src="menu" name="menu" scrolling="auto">
+      <!-- Правый фрейм: основной контент -->
+      <frame src="content" name="content" scrolling="auto">
+    </frameset>
+  </frameset>
+  <noframes>
+    <body>
+      Ваш браузер не поддерживает фреймы. Пожалуйста, используйте современный браузер.
+    </body>
+  </noframes>
+</html>
